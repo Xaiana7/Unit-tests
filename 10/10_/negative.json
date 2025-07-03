@@ -1,0 +1,134 @@
+[
+    {
+        "desc": "Negative test 1 - - Incorrect students type",
+        "st": 1,
+        "gr": [
+            ["1", "0", "", "1", "1"],
+            ["0", "", "1", "", "0"],
+            ["1", "1", "0", "1", "1"],
+            ["", "", "", "", ""]
+        ],
+        "exep":"Students Typisation error!"
+
+    },
+    {
+        "desc": "Negative test 2 - Incorrect grades type",
+        "st": ["Ivanov", "Petrov", "Sidorov", "Smith"],
+        "gr": 1,
+        "exep": "Grades Typisation error!"
+    },
+    {
+        "desc": "Negative test 3 - Grades not an array of arrays",
+        "st": ["Ivanov", "Petrov", "Sidorov", "Smith"],
+        "gr": [
+            ["1", "0", "", "1", "1"],
+            "not an array",
+            ["1", "1", "0", "1", "1"],
+            ["", "", "", "", ""]
+        ],
+        "exep": "Grades Typisation error!"
+    },
+
+    {
+        
+            "desc": "Negative test 4 - Students length greater than 100",
+            "st": [
+                "Student1", "Student2", "Student3", "Student4", "Student5", "Student6", "Student7", "Student8", "Student9", "Student10",
+                "Student11", "Student12", "Student13", "Student14", "Student15", "Student16", "Student17", "Student18", "Student19", "Student20",
+                "Student21", "Student22", "Student23", "Student24", "Student25", "Student26", "Student27", "Student28", "Student29", "Student30",
+                "Student31", "Student32", "Student33", "Student34", "Student35", "Student36", "Student37", "Student38", "Student39", "Student40",
+                "Student41", "Student42", "Student43", "Student44", "Student45", "Student46", "Student47", "Student48", "Student49", "Student50",
+                "Student51", "Student52", "Student53", "Student54", "Student55", "Student56", "Student57", "Student58", "Student59", "Student60",
+                "Student61", "Student62", "Student63", "Student64", "Student65", "Student66", "Student67", "Student68", "Student69", "Student70",
+                "Student71", "Student72", "Student73", "Student74", "Student75", "Student76", "Student77", "Student78", "Student79", "Student80",
+                "Student81", "Student82", "Student83", "Student84", "Student85", "Student86", "Student87", "Student88", "Student89", "Student90",
+                "Student91", "Student92", "Student93", "Student94", "Student95", "Student96", "Student97", "Student98", "Student99", "Student100",
+                "Student101"
+            ],
+            "gr": [],
+            "exep": "Students size error!"
+        
+    },
+
+    {
+        "desc": "Negative test 5 - Students length less than 1",
+        "st": [],
+        "gr": [],
+        "exep": "Students size error!"
+    },
+    {
+        "desc": "Negative test 6 - Students and grades length mismatch",
+        "st": ["Ivanov", "Petrov", "Sidorov"],
+        "gr": [
+            ["1", "0", "", "1", "1"],
+            ["0", "", "1", "", "0"]
+        ],
+        "exep": "Array size inconsistency!"
+    },
+    {
+        "desc": "Negative test 7 - Invalid student name type",
+        "st": ["Ivanov", 123, "Sidorov"],
+        "gr": [
+            ["1", "0", "", "1", "1"],
+            ["0", "", "1", "", "0"],
+            ["1", "1", "0", "1", "1"]
+        ],
+        "exep": "Students Typisation error!"
+    },
+    {
+        "desc": "Negative test 8 - Invalid student name length",
+        "st": ["", "Petrov", "Sidorov"],
+        "gr": [
+            ["1", "0", "", "1", "1"],
+            ["0", "", "1", "", "0"],
+            ["1", "1", "0", "1", "1"]
+        ],
+        "exep": "Students size error!"
+    },
+    {
+        "desc": "Negative test 9 - Duplicate student names",
+        "st": ["Ivanov", "Ivanov", "Sidorov"],
+        "gr": [
+            ["1", "0", "", "1", "1"],
+            ["0", "", "1", "", "0"],
+            ["1", "1", "0", "1", "1"]
+        ],
+        "exep": "Students value error!"
+    },
+    {
+        "desc": "Negative test 10 - Grades array length mismatch",
+        "st": ["Ivanov", "Petrov", "Sidorov"],
+        "gr": [
+            ["1", "0", "", "1"],
+            ["0", "", "1", "", "0"],
+            ["1", "1", "0", "1", "1"]
+        ],
+        "exep": "Grades size error!"
+    },
+    {
+        "desc": "Negative test 11 - Invalid grade value",
+        "st": ["Ivanov", "Petrov", "Sidorov"],
+        "gr": [
+            ["1", "0", "", "1", "1"],
+            ["0", "", "1", "invalid", "0"],
+            ["1", "1", "0", "1", "1"]
+        ],
+        "exep": "Grades value error!"
+    },
+    {
+        "desc": "Negative test 12 -  students undefined",
+        "st": null,
+        "gr": [
+            ["1", "0", "", "1", "1"],
+            ["0", "", "1", "invalid", "0"],
+            ["1", "1", "0", "1", "1"]
+        ],
+        "exep": "Determination error!"
+    },
+    {
+        "desc": "Negative test 13 -  grades undefined",
+        "st": ["Sidorov"],
+        "gr": null,
+        "exep": "Determination error!"
+    }
+]

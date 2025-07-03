@@ -1,0 +1,158 @@
+[
+    {
+        "desc": "Positive test 1 - correct input",
+        "st":  ["Ivanov", "Petrov", "Sidorov", "Smit"],
+        "gr": [
+            ["1", "0", "", "1", "1"],
+            ["0", "", "1", "", "0"],
+            ["1", "1", "0", "1", "1"],
+            ["", "", "", "", ""]
+        ],
+        "result": {
+            "Avg": 62.78,
+            "resArr": [
+                { "name": "Petrov", "Nk": 3, "Pk": 33.33 }
+            ]
+        }
+    },
+    {
+        "desc": "Positive test 2 - without '-' ",
+        "st": ["Ivanov", "Petrov", "Sidorov", "Smith"],
+        "gr": [
+          ["1", "0", "1", "1", "0"],
+          ["1", "1", "1", "1", "0"],
+          ["0", "0", "0", "0", "1"],
+          ["1", "0", "0", "1", "0"]
+        ],
+        "result": {
+          "Avg": 50,
+          "resArr": [
+            { "name": "Sidorov", "Nk": 5, "Pk": 20 },
+            { "name": "Smith", "Nk": 5, "Pk": 40 }
+          ]
+        }
+      },
+      {
+        "desc": "Positive test 3 - without 0 ",
+        "st": ["Alice", "Bob", "Charlie", "David"],
+        "gr": [
+          ["1", "1", "1", "", ""],
+          ["1", "1", "", "", ""],
+          ["", "1", "", "1", "1"],
+          ["", "", "", "", "1"]
+        ],
+        "result": {
+          "Avg": 100,
+          "resArr": [
+            { "name": "Alice", "Nk": 3, "Pk": 100 },
+            { "name": "Bob", "Nk": 2, "Pk": 100 },
+            { "name": "Charlie", "Nk": 3, "Pk": 100 },
+            { "name": "David", "Nk": 1, "Pk": 100 }
+          ]
+        }
+      },
+      {
+        "desc": "Positive test 4 - without 1",
+        "st": ["Eve", "Mallory", "Oscar"],
+        "gr": [
+          ["", "0", "", "0"],
+          ["0", "", "", ""],
+          ["0", "0", "0", ""]
+        ],
+        "result": {
+          "Avg": 0,
+          "resArr": [
+            { "name": "Eve", "Nk":2, "Pk":0 },
+            { "name": "Mallory", "Nk":1, "Pk":0 },
+            { "name": "Oscar", "Nk":3, "Pk":0 }
+          ]
+        }
+      },
+      {
+        "desc": "Positive test 5 - student with 1, student with 0",
+        "st": ["Ivanov", "Petrov"],
+        "gr": [
+          ["1", "1", "1", "1", "1"],
+          ["0", "0", "0", "0", "0"]
+        ],
+        "result": {
+          "Avg": 50,
+          "resArr": [
+            { "name": "Petrov", "Nk": 5, "Pk": 0 }
+          ]
+        }
+      },
+      {
+        "desc": "Positive test 6 - student with '-', student with 0",
+        "st": ["Alice", "Bob"],
+        "gr": [
+          ["0", "0", "0", "0"],
+          ["", "", "", ""]
+        ],
+        "result": {
+          "Avg":0,
+          "resArr": [
+            { "name": "Alice", "Nk": 4, "Pk": 0 }
+          ]
+        }
+      },
+      {
+        "desc": "Positive test 7 - student with '-', student with 1",
+        "st": ["Alice", "Bob"],
+        "gr": [
+          ["1", "1", "1", "1"],
+          ["", "", "", ""]
+        ],
+        "result": {
+          "Avg": 100,
+          "resArr": [
+            { "name": "Alice", "Nk": 4, "Pk": 100 }
+          ]
+        }
+      },
+      {
+        "desc": "Positive test 8 - Single student",
+        "st": ["Single Student"],
+        "gr": [
+            ["1", "0", "1", "1", "0"]
+        ],
+        "result": {
+            "Avg": 60,
+            "resArr": [
+                { "name": "Single Student", "Nk": 5, "Pk": 60 }
+            ]
+        }
+    },
+    {
+        "desc": "Positive test 9 - Single visit in each row",
+        "st": ["Ivanov", "Petrov", "Sidorov"],
+        "gr": [
+            ["1"],
+            ["0"],
+            ["1"]
+        ],
+        "result": {
+            "Avg": 66.67,
+            "resArr": [
+                { "name": "Petrov", "Nk": 1, "Pk": 0 }
+            ]
+        }
+    },     
+    {
+        "desc": "Positive test 10 - Single visit in each row",
+        "st": ["Ivanov", "Petrov", "Sidorov"],
+        "gr": [
+            ["1", "", "", "", ""],
+            ["0", "", "", "", ""],
+            ["1", "", "", "", ""]
+        ],
+        "result": {
+            "Avg": 66.67,
+            "resArr": [
+                { "name": "Petrov", "Nk": 1, "Pk": 0 }
+            ]
+        }
+    }
+    
+
+]
